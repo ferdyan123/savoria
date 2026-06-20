@@ -21,7 +21,7 @@ body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--brown);
 #preloader{position:fixed;inset:0;z-index:9999;background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;transition:opacity 0.9s var(--ease),visibility 0.9s}
 #preloader.done{opacity:0;visibility:hidden;pointer-events:none}
 .pre-logo-badge{width:96px;height:96px;border-radius:50%;overflow:hidden;border:1px solid rgba(201,168,76,0.35);opacity:0;animation:preUp 1s 0.3s var(--ease) forwards}
-.pre-logo-badge img{width:100%;height:100%;object-fit:cover;transform:scale(1.5)}
+.pre-logo-badge img{width:100%;height:100%;object-fit:contain;padding:8px}
 .pre-wordmark{font-family:'Cormorant Garamond',serif;font-size:1rem;letter-spacing:0.4em;text-transform:uppercase;color:rgba(253,251,247,0.35);opacity:0;animation:preUp 0.7s 1s var(--ease) forwards}
 .pre-bar{width:0;height:0.5px;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:preBarGrow 0.9s 1.3s var(--ease) forwards}
 @keyframes preUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
@@ -42,7 +42,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.3rem 6%;display:fl
 nav.scrolled{padding:0.8rem 6%;background:rgba(250,247,242,0.95);backdrop-filter:blur(28px) saturate(1.5);border-bottom:1px solid rgba(201,168,76,0.1)}
 .nav-logo{display:flex;align-items:center;gap:12px;cursor:pointer;text-decoration:none}
 .nav-logo-badge{width:46px;height:46px;border-radius:50%;overflow:hidden;border:1.5px solid rgba(201,168,76,0.55);flex-shrink:0;transition:border-color 0.4s,width 0.4s,height 0.4s;background:var(--warm-white)}
-.nav-logo-badge img{width:100%;height:100%;object-fit:cover;transform:scale(1.5)}
+.nav-logo-badge img{width:100%;height:100%;object-fit:contain;padding:5px}
 nav.scrolled .nav-logo-badge{width:40px;height:40px}
 .nav-wordmark{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;letter-spacing:0.04em;color:var(--warm-white);transition:color 0.4s}
 nav.scrolled .nav-wordmark{color:var(--brown)}
@@ -263,7 +263,7 @@ footer{background:var(--ink);padding:5rem 8% 2.5rem;color:rgba(253,251,247,0.55)
 .ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(201,168,76,0.1)}
 .ft-logo{display:flex;align-items:center;gap:12px}
 .ft-logo-badge{width:48px;height:48px;border-radius:50%;overflow:hidden;border:1.5px solid rgba(201,168,76,0.4);flex-shrink:0}
-.ft-logo-badge img{width:100%;height:100%;object-fit:cover;transform:scale(1.5)}
+.ft-logo-badge img{width:100%;height:100%;object-fit:contain;padding:6px}
 .ft-wordmark{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--warm-white)}
 .ft-wordmark em{font-style:normal;color:var(--gold)}
 .ft-tagline{font-size:0.7rem;font-style:italic;color:rgba(253,251,247,0.25);margin-top:6px}
@@ -363,11 +363,6 @@ footer{background:var(--ink);padding:5rem 8% 2.5rem;color:rgba(253,251,247,0.55)
       <a onclick="goTo('pesan')" class="btn-lux"><span>Mulai Konsultasi</span><span>→</span></a>
       <a onclick="goTo('galeri')" class="btn-lux-ghost">Lihat Portofolio</a>
     </div>
-  </div>
-  <div class="hero-stats">
-    <div class="h-stat"><div class="h-stat-n">500+</div><div class="h-stat-l">Event Sukses</div></div>
-    <div class="h-stat"><div class="h-stat-n">12+</div><div class="h-stat-l">Tahun Berpengalaman</div></div>
-    <div class="h-stat"><div class="h-stat-n">98%</div><div class="h-stat-l">Kepuasan Klien</div></div>
   </div>
   <div class="hero-scroll">
     <span>Scroll</span>
